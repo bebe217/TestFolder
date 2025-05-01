@@ -44,7 +44,7 @@ class FolderUtils: ObservableObject {
     }
     
     func createFolderOnEmpty() {
-        let empty = checkFolders()
+        let empty = getEmptyFoldersNum()
         guard empty.isEmpty == false else {
             result = "No empty folder to create"
             return
@@ -85,7 +85,7 @@ class FolderUtils: ObservableObject {
         return Int(digits)
     }
     
-    func checkFolders() -> Set<Int> {
+    func getEmptyFoldersNum() -> Set<Int> {
         let dirs = listDirs(url: baseURL)
         var existDirs: Set<Int> = []
         for item in dirs {

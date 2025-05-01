@@ -21,7 +21,7 @@ struct ContentView: View {
                 folderUtils.removeFolder(at: 511)
             }
             Button("Check empty spot") {
-                _ = folderUtils.checkFolders()
+                _ = folderUtils.getEmptyFoldersNum()
             }
             Button("Create on empty") {
                 folderUtils.createFolderOnEmpty()
